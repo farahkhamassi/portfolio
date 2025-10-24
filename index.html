@@ -1,107 +1,446 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV — Développeuse web full-stack | Farah Khamassi</title>
+    <meta name="description" content="À la recherche d'un poste de développeuse web (front/back). WordPress, PHP, MySQL, webdesign, CSS/HTML, JavaScript. Basée à Nantes.">
 
-  <title>Portfolio — Farah Khamassi (Développeuse web junior)</title>
-  <meta name="description" content="Portfolio de Farah Khamassi — développeuse web junior à Nantes. Projets front & back : HTML, CSS, JavaScript, PHP, MySQL." />
-  <meta name="theme-color" content="#8b5e34" />
+    <!-- Open Graph (partage) -->
+    <meta property="og:title" content="CV — Farah Khamassi">
+    <meta property="og:description" content="Développeuse web (front/back). Disponible à Nantes & en télétravail.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://farahkhamassi.github.io/">
 
-  <!-- Open Graph (aperçu lors du partage) -->
-  <meta property="og:title" content="Portfolio — Farah Khamassi" />
-  <meta property="og:description" content="Développeuse web junior — interfaces claires et performantes. Nantes & télétravail." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://farahkhamassi.github.io/portfolio/" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,500,600,700,800,900|Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <!-- Font Awesome (sans integrity tronquée) -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  </head>
+  <body>
 
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <!-- Lien d'évitement pour l'accessibilité clavier -->
-  <a class="visually-hidden" href="#main">Aller au contenu</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#home" aria-label="Aller à l’accueil"><i class="fal fa-house"></i></a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Parcours</a></li>
+        <li><a href="#projects">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <header>
-    <div class="container">
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="#accueil" class="logo" aria-label="Accueil">Farah<span>.</span></a>
-        <ul class="menu" id="primary-menu">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#projets">Projets</a></li>
+    <div id="mobile-nav" aria-label="Menu mobile">
+      <div id="menu-buttons">
+        <div id="hamburger" aria-label="Ouvrir le menu" role="button" tabindex="0">
+          <i class="far fa-bars"></i>
+        </div>
+        <div id="cross" class="animated fadeIn" aria-label="Fermer le menu" role="button" tabindex="0">
+          <i class="far fa-times"></i>
+        </div>
+      </div>
+
+      <div id="menu" class="animated fadeIn">
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#experience">Parcours</a></li>
+          <li><a href="#projects">Réalisations</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button id="burger" aria-label="Ouvrir le menu" aria-controls="primary-menu" aria-expanded="false">☰</button>
-      </nav>
+      </div>
     </div>
-  </header>
 
-  <main id="main">
-    <section id="accueil" class="hero container">
-      <h1>Développeuse web junior - v4</h1>
-      <p>Je conçois des interfaces simples, accessibles et efficaces.</p>
-      <a class="btn" href="#projets">Voir mes projets</a>
-    </section>
+    <div class="parallax-outer">
+      <div class="parallax" id="home">
+        <div class="outer-container" id="homepage">
+          <header>
+            Bonjour, je m'appelle Farah et je suis
+            <h1>Développeuse web full-stack</h1>
+          </header>
 
-    <section id="apropos" class="container">
-      <h2>À propos</h2>
-      <p>En reconversion vers le développement web (front &amp; back). Rigoureuse, curieuse et orientée utilisateur.</p>
-      <ul class="tags" aria-label="Compétences techniques">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>Git</li>
-      </ul>
-    </section>
+          <div id="header-text">
+            Je suis à la recherche d'un <strong>poste</strong>.
+          </div>
 
-    <section id="projets" class="container">
-      <h2>Projets</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Portfolio</h3>
-          <p>Site personnel responsive (HTML/CSS/JS).</p>
-          <a href="https://github.com/farahkhamassi/portfolio" class="link" target="_blank" rel="noopener">Voir le code</a>
-        </article>
-        <article class="card">
-          <h3>To-Do List</h3>
-          <p>Application JS (localStorage, DOM).</p>
-          <a href="https://github.com/farahkhamassi/todo-list" class="link" target="_blank" rel="noopener">Voir le code</a>
-        </article>
-        <article class="card">
-          <h3>Mini-Blog</h3>
-          <p>CRUD PHP/MySQL (articles).</p>
-          <a href="https://github.com/farahkhamassi/mini-blog" class="link" target="_blank" rel="noopener">Voir le code</a>
-        </article>
-        <article class="card">
-          <h3>SaaS</h3>
-          <p>Projet SaaS — installation &amp; base.</p>
-          <a href="https://github.com/farahkhamassi/saas-starter" class="link" target="_blank" rel="noopener">Voir le code</a>
-        </article>
+          <div class="space-between" aria-label="Compétences clés">
+            <div class="item skill-box animated fadeInUp">
+              <i class="fas fa-code"></i>
+              front-end
+            </div>
+            <div class="item skill-box animated fadeInUp">
+              <i class="fas fa-database"></i>
+              back-end
+            </div>
+            <div class="item skill-box animated fadeInUp">
+              <i class="fas fa-mobile-alt"></i>
+              mobile
+            </div>
+            <div class="item skill-box animated fadeInUp">
+              <i class="fas fa-globe"></i>
+              anglais
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <section id="about">
+      <div class="outer-container">
+        <div class="space-between">
+          <div class="item box1">
+            <div class="img-container">
+              <img src="avatar_cv.jpg" width="100%" alt="Photo de profil de Farah Khamassi">
+            </div>
+            <p><b>Nom :</b> Farah KHAMASSI<br>
+              <b>Ville actuelle :</b> Nantes (44)<br>
+              <b>Hobbies :</b> voyage, lecture, design d'intérieur, web-design
+            </p>
+          </div>
+
+          <div class="item box2">
+            <h2>À propos de moi</h2>
+            <p>Après une formation de Développeuse Web & web mobile (niveau Bac+2), je recherche un emploi couvrant le front-end et/ou le back-end.</p>
+            <p>Je profite aussi de mon temps pour apprendre de nouvelles technologies et enrichir mes connaissances.</p>
+            <p>Titulaire d’une licence en Sciences de l'Éducation et en Français, je me suis reconvertie vers ma première passion : le développement web.</p>
+            <p>Autonome et adaptable, je travaille en équipe comme en solo, avec un sens de la proposition pour améliorer et optimiser les projets.</p>
+          </div>
+        </div>
+
+        <div class="box" id="buttons-container">
+          <a href="#contact"><button class="item" id="cont" type="button">
+            Me contacter
+          </button></a>
+          <button class="item" id="cv" type="button" onclick="window.open('CV Farah KHAMASSI.pdf')">
+            Télécharger mon CV
+          </button>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <form id="contactForm" novalidate>
-        <label for="name">Nom</label>
-        <input id="name" name="name" type="text" required autocomplete="name" />
+    <section id="skills" class="grey">
+      <div class="outer-container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="under-title"></div>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required autocomplete="email" />
+        <div class="skill center fadeInLeft animated" id="front-end">
+          <div class="c-item content">
+            <h4 class="front">Front-end</h4>
+            <div class="item desc">
+              Création et intégration de sites et d’applications web responsives, accessibles, conformes W3C.
+            </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="space-between">
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    HTML5<br>
+                    CSS3<br>
+                    JavaScript<br>
+                  </div>
+                  <div class="item names">
+                    jQuery<br>
+                    Bootstrap<br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-item icon front"><i class="fas fa-code"></i></div>
+        </div>
 
-        <button class="btn" type="submit">Envoyer</button>
-      </form>
-      <p id="formStatus" class="status" aria-live="polite"></p>
+        <div class="skill center fadeInRight animated" id="back-end">
+          <div class="c-item icon back"><i class="fas fa-database"></i></div>
+          <div class="c-item content">
+            <h4 class="back">Back-end</h4>
+            <div class="item desc">
+              Développement web, création/gestion de bases de données, POO, architecture 3-tiers, mise en ligne.
+            </div>
+
+            <div class="space-between">
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    PHP7<br>
+                    MySQL<br>
+                    API
+                  </div>
+                </div>
+              </div>
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    Client SSH<br>
+                    Connexion FTP<br>
+                    SEO<br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill center fadeInLeft animated" id="cms">
+          <div class="c-item content">
+            <h4 class="cms">CMS</h4>
+            <div class="item desc">
+              Création/édition de thèmes & plugins. Expérience principalement sur WordPress. Plugins utilisés : WooCommerce, Yoast SEO.
+            </div>
+
+            <div class="space-between">
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    WordPress<br>
+                    Shopify
+                  </div>
+                </div>
+              </div>
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    Wix<br>
+                    PrestaShop
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-item icon cms"><i class="fas fa-user-edit"></i></div>
+        </div>
+
+        <div class="skill center fadeInRight animated" id="web-design">
+          <div class="c-item icon design"><i class="fas fa-pencil-ruler"></i></div>
+          <div class="c-item content">
+            <h4 class="design">Web design</h4>
+            <div class="item desc">
+              Création de maquettes, conception centrée utilisateur.
+            </div>
+            <div class="space-between">
+              <div class="item el">
+                <div class="space-between">
+                  <div class="item names">
+                    Pencil<br>
+                  </div>
+                  <div class="item names">
+                    Balsamiq<br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill center fadeInLeft animated" id="environnement">
+          <div class="c-item content">
+            <h4 class="env">Environnement de travail</h4>
+            <div class="item desc end">
+              <i class="fas fa-desktop"></i> <b>Systèmes :</b> Windows, macOS<br>
+              <i class="fas fa-terminal"></i> <b>Workflow :</b> Git, WAMP, MAMP, Chrome, FileZilla, Slack<br>
+              <i class="fas fa-code"></i> <b>IDE :</b> Visual Studio Code<br>
+              <i class="fas fa-pen-alt"></i> <b>Autres :</b> Anglais niveau C1<br>
+              <i class="fas fa-user-tie"></i> <b>Savoir-être :</b> adaptation, travail en équipe, organisation, rigueur, créativité
+            </div>
+          </div>
+          <div class="c-item icon env"><i class="fas fa-mug-hot"></i></div>
+        </div>
+      </div>
     </section>
-  </main>
 
-  <footer class="container footer">
-    <small>© <span id="year"></span> Farah Khamassi — Nantes</small>
-  </footer>
+    <section id="experience">
+      <div class="outer-container">
+        <h2 class="section-title">Parcours</h2>
 
-  <script src="script.js?v=3"></script>
-</body>
+        <div id="timeline">
+          <div class="event work fadeInUp animated" id="six">
+            <div class="left">
+              <p>Juillet 2023 <br>à <br>Mai 2024</p>
+            </div>
+            <div class="right">
+              <div class="content">
+                <h3><i class="fas fa-graduation-cap"></i> Formation DÉVELOPPEUR WEB FULL-STACK (niveau 3)</h3>
+                <div class="place">AFPA</div>
+                <ul>
+                  <strong>Front-end (avec sécurité) :</strong>
+                  <li>Maquetter une application</li>
+                  <li>Réaliser une interface web statique et adaptable</li>
+                  <li>Développer une interface web dynamique</li>
+                  <li>Réaliser une interface avec CMS ou e-commerce</li>
+
+                  <strong>Back-end (avec sécurité) :</strong>
+                  <li>Créer une base de données</li>
+                  <li>Développer les composants d’accès aux données</li>
+                  <li>Développer la partie back-end</li>
+                  <li>Intégrer des composants dans un CMS/e-commerce</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="event exp fadeInUp animated" id="five">
+            <div class="left">
+              <p>2021 <br>2023</p>
+            </div>
+            <div class="right">
+              <div class="content">
+                <h3><i class="fas fa-users"></i> Conseillère clientèle</h3>
+                <ul>
+                  <li>Ministère de la Santé, Doctolib, Travorium, Accrie…</li>
+                  <li>Relation client, créations d’abonnements/contrats, résolution de conflits, gestion SAV, back-office, outils CRM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="event school fadeInUp animated" id="lic-educ">
+            <div class="left">
+              <p>Septembre 2020 <br>à <br>Juin 2021</p>
+            </div>
+            <div class="right">
+              <div class="content">
+                <h3><i class="fas fa-graduation-cap"></i> Licence Sciences de l’éducation (niv. II)</h3>
+                <div class="place">Université Paris 8</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event school fadeInUp animated" id="lic-fle">
+            <div class="left">
+              <p>Septembre 2020 <br>à <br>Juin 2021</p>
+            </div>
+            <div class="right">
+              <div class="content">
+                <h3><i class="fas fa-graduation-cap"></i> Licence Français Langue Étrangère (niv. II)</h3>
+                <div class="place">Université de La Réunion</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<section id="projects" class="grey">
+  <div class="outer-container">
+    <h2 class="section-title">Réalisations en ligne</h2>
+
+    <div class="space-between">
+
+      <!-- Projet existant conservé -->
+      <div class="item project" id="nkproduction">
+        <div class="image-box"></div>
+        <div class="overlay">
+          <div class="text">
+            <h4>NK PRODUCTION</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Nouveaux projets (version à 2) === -->
+
+      <div class="item project" id="portfolio-projet">
+        <div class="image-box"></div>
+        <div class="overlay">
+          <div class="text">
+            <h4>Portfolio</h4>
+            <small>Site personnel responsive (HTML/CSS/JS)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item project" id="todo-projet">
+        <div class="image-box"></div>
+        <div class="overlay">
+          <div class="text">
+            <h4>To-Do List</h4>
+            <small>App JS (localStorage, DOM)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item project" id="miniblog-projet">
+        <div class="image-box"></div>
+        <div class="overlay">
+          <div class="text">
+            <h4>Mini-Blog</h4>
+            <small>CRUD PHP/MySQL (articles)</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTO ECOLOGIK supprimé -->
+    </div>
+
+    <!-- Boutons de liens (code/démo) -->
+    <div class="box" id="buttons-container">
+
+      <!-- NK PRODUCTION (démo) -->
+      <a href="https://nkprodzcom.wordpress.com" target="_blank" rel="noopener">
+        <button class="item" type="button">Voir le site (NK PRODUCTION)</button>
+      </a>
+
+      <!-- Portfolio -->
+      <a href="https://github.com/farahkhamassi/portfolio" target="_blank" rel="noopener">
+        <button class="item" type="button">Voir le code (Portfolio)</button>
+      </a>
+      <a href="https://farahkhamassi.github.io/portfolio/" target="_blank" rel="noopener">
+        <button class="item" type="button">Voir la démo (Portfolio)</button>
+      </a>
+
+      <!-- To-Do List -->
+      <a href="https://github.com/farahkhamassi/todo-list" target="_blank" rel="noopener">
+        <button class="item" type="button">Voir le code (To-Do)</button>
+      </a>
+
+      <!-- Mini-Blog -->
+      <a href="https://github.com/farahkhamassi/mini-blog" target="_blank" rel="noopener">
+        <button class="item" type="button">Voir le code (Mini-Blog)</button>
+      </a>
+    </div>
+  </div>
+</section>
+                
+    <section id="contact">
+      <div class="outer-container">
+        <h2 class="section-title">Contactez-moi !</h2>
+
+        <div class="contact-subtitle">
+          Actuellement à la recherche d’un poste en tant que :<br>
+          <div class="jobs">
+            <b>Développeuse full-stack • front-end • back-end</b>
+          </div>
+        </div>
+
+        <div class="space-between">
+          <div class="item contact-box phone">
+            <i class="fal fa-mobile"></i>
+            <div class="text">+33 6 51 78 74 95</div>
+          </div>
+          <div class="item contact-box email">
+            <i class="fal fa-envelope"></i>
+            <div class="text">farahkhamassi@gmail.com</div>
+          </div>
+          <div class="item contact-box meet">
+            <div class="text">Vous souhaitez<br>me rencontrer ?</div>
+            <p>Disponible à <b>Nantes</b> et alentours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://www.linkedin.com/in/farah-khamassi/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <i class="far fa-print" onclick="window.open('CV Farah KHAMASSI.pdf')"></i><br>
+      Farah KHAMASSI © 2024<br>
+      Tous droits réservés
+    </footer>
+
+    <script src="scripts/jquery-3.4.0.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
 </html>

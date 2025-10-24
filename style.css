@@ -1,0 +1,365 @@
+/* ===========================
+   THEME (couleurs & tokens)
+=========================== */
+:root{
+  --brand-rose: #FFB8B8;   /* rose à garder */
+  --ink: #292929;          /* texte principal */
+  --muted: #6b7280;        /* texte secondaire */
+  --bg: #fffdfb;           /* fond page doux */
+  --card: #ffffff;         /* cartes/blocs */
+  --grey-soft: #F3F4F6;    /* sections grises pleines */
+  --grey-line: #E5E7EB;    /* séparateurs, bordures */
+  --shadow: 3px 3px 5px rgba(0,0,0,.12);
+
+  --btn-green: #2FDC9C;    /* action (garde ton vert) */
+  --btn-green-ink: #0a3d2d;
+}
+
+/* ===========================
+   RESET minimal + base
+=========================== */
+html{ scroll-behavior:smooth; }
+body, html{
+  font-family: 'Roboto', sans-serif;
+  color: var(--ink);
+  font-weight: 300;
+  font-size: 18px;
+  word-break: break-word;
+  margin:0;
+  background: var(--bg);
+}
+img{ max-width:100%; height:auto; display:block; }
+strong{ font-weight:700; }
+b{ font-weight:500; }
+
+/* ===========================
+   NAV (desktop + mobile)
+   (on garde le rose, on rend le fond lisible)
+=========================== */
+nav{
+  position: fixed;
+  z-index: 9999;
+  inset: 0 0 auto 0;
+  padding: 14px 0;
+  width: 100%;
+  color: var(--brand-rose);
+  background: rgba(0,0,0,0.65);           /* plus franc = meilleure lisibilité */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+nav ul{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  padding: 0 16px;
+}
+nav li{
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 32px;
+}
+nav li a{
+  color: var(--brand-rose) !important;
+  text-decoration: none !important;
+  opacity: .95;
+}
+nav li a:hover{ opacity: 1; }
+
+/* Mobile menu trigger */
+#mobile-nav{ display:none; position:fixed; z-index:9999; }
+#menu-buttons{
+  position: fixed; top: 8px; right: 8px;
+  color: var(--brand-rose); font-size: 2rem; width: 44px;
+  text-align:center;
+}
+#hamburger, #cross{ cursor:pointer; }
+#cross{ display:none; }
+
+/* Overlay mobile */
+#menu{
+  display:none;
+  background-color: rgba(0,0,0,0.88); /* reste sombre pour contraster */
+  height:100%; width:100%;
+  position:fixed; inset:0;
+}
+#menu ul{
+  text-align:center; margin: 0 auto; width: min(700px, 90%);
+  padding: 70px 0;
+}
+#menu ul li{
+  padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.18);
+}
+#menu ul li a{ color: var(--brand-rose); text-decoration:none; }
+
+/* ===========================
+   HERO / HEADER
+=========================== */
+.parallax-outer{ height: 100vh; }
+.parallax{
+  background-image: url("header farah khamassi.png");
+  height:100%; position:relative;
+  background-attachment: fixed;
+  background-position:center; background-repeat:no-repeat; background-size:cover;
+}
+#homepage{
+  position:absolute; left:50%; bottom:70px; transform: translateX(-50%);
+  width: min(1200px, 94%);
+}
+header{
+  font-family: 'Montserrat', sans-serif;
+  color: #0a0a0a;
+  font-size: 39px; font-weight:300; font-style: italic;
+}
+h1{
+  font-size: clamp(40px, 6vw, 80px);
+  font-style:normal; font-weight:500; margin: 15px 0;
+}
+#header-text{
+  font-size: 24px; font-weight:300; margin: 60px 0 90px;
+}
+
+/* compétences “bulles” */
+.space-between{ text-align: justify; }
+.space-between .item{ display: inline-block; }
+.skill-box{
+  color:#080808; font-family:'Montserrat', sans-serif;
+  font-size: 20px; text-align:center;
+}
+.skill-box i{
+  display:block; font-size:70px; margin-bottom: 24px; transition: transform .25s ease;
+}
+.skill-box:hover i{ transform: translateY(-2px) scale(1.02); }
+
+/* ===========================
+   SECTIONS GENERIQUES
+=========================== */
+section{ padding: 80px 0 60px; }
+.outer-container{ max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.section-title{ text-align:center; padding-bottom: 40px; }
+section.grey{ background: var(--grey-soft); }     /* gris PLEIN (pas de transparence) */
+
+/* à propos */
+.box1{ width:370px; }
+.box1 p{
+  font-family:'Montserrat', sans-serif; font-weight:300; font-size:15px;
+  padding-top:10px; line-height:30px;
+}
+.box2{ vertical-align: top; width: 755px; padding: 20px; }
+h2{
+  font-family:'Montserrat', sans-serif;
+  font-size: 35px; font-weight: 500; margin: 0 0 .8rem;
+}
+.box2 p{ padding: 10px 0; line-height:30px; }
+
+/* boutons */
+button{
+  display:inline-block; margin: 0 24px;
+  border: none; text-align:center; text-transform: uppercase; color:#fff;
+  font-family:'Montserrat', sans-serif; font-weight:500; font-size:17px;
+  padding: 16px 38px; border-radius: 40px; box-shadow: var(--shadow);
+  cursor:pointer; transition: transform .2s ease, opacity .2s ease, filter .2s ease;
+}
+button#cont{
+  background-color: var(--btn-green); color:#fff;
+}
+#cv{ background: #4B5563; } /* gris foncé lisible */
+button:hover{ transform: translateY(-1px); }
+button:active{ transform: translateY(0); filter: brightness(.96); }
+
+/* ===========================
+   COMPETENCES (SKILLS)
+=========================== */
+#skills{ overflow:hidden; }
+#skills .skill{ margin-bottom: 40px; }
+.center{ display: table; width:100%; }
+.center .c-item{ display: table-cell; vertical-align: middle; }
+
+#skills .c-item.content{
+  padding: 25px 40px 0; font-size:16px; line-height:26px;
+  background: var(--card); border-radius: 15px; box-shadow: var(--shadow);
+  width: 65%;
+}
+#skills .c-item.icon{ font-size: 140px; width: 27%; text-align:center; }
+
+/* couleurs de titres (on garde ton code couleur, plus propres dans l’ensemble) */
+#skills .front{ color: #9B59B6; }   /* violet */
+#skills .back{  color: #3498DB; }   /* bleu  */
+#skills .cms{   color: #E67E22; }   /* orange */
+#skills .design{color: #2ECC71; }   /* vert   */
+#skills .env{   color: #95A5A6; }   /* gris   */
+
+#skills h4{ font-size:22px; margin-bottom:10px; text-align:center; }
+#skills .content .item.desc{ margin-bottom: 20px; }
+#skills .content .item.desc.end{ margin-bottom: 30px; line-height: 35px; }
+#skills .content .item.desc.end i{ width: 25px; }
+#skills .space-between{ margin-bottom: -13px; }
+#skills .space-between .item{ vertical-align: top; }
+#skills .content .el{ line-height: 30px; width: 46%; }
+
+/* ===========================
+   PARCOURS (timeline)
+=========================== */
+#timeline{
+  position:relative; max-width: 100%;
+  margin-top: 40px;
+}
+.event{ position: relative; width: inherit; }
+.event .left{
+  position:absolute; top: calc(50% - 30px);
+  font-family:'Montserrat', sans-serif; font-size:15px; font-weight:500;
+  text-align:center; line-height:20px; width:132px;
+}
+.event .right{
+  padding: 20px 0 40px; position: relative; margin-left: 290px;
+}
+.event .right::before{
+  content:""; position:absolute; top: calc(50% - 10px); left:-10px;
+  border: 10px solid transparent; border-right-color: var(--grey-soft);
+}
+.event .right .content{
+  padding: 30px 40px 20px 40px; font-size:16px; line-height:26px;
+  background: var(--grey-soft); border-radius:15px; box-shadow: var(--shadow);
+}
+.event h3{ padding-bottom: 10px; font-family:'Montserrat', sans-serif; font-size:26px; font-weight:600; }
+.event h3 i{ width:45px; }
+/* couleurs titres par type d’événement */
+.event.work h3{  color:#3498DB; }   /* bleu */
+.event.exp h3{   color:#E67E22; }   /* orange */
+.event.school h3{color:#2ECC71; }   /* vert  */
+
+#timeline .event .right .date{ display:none; }
+.event .place{
+  font-family:'Montserrat', sans-serif; font-size:17px; font-weight:500; padding-bottom: 18px;
+}
+#experience li{ padding-bottom: 10px; }
+#experience li:before{ content:'●'; padding-right:10px; }
+
+/* pastilles */
+.event .right::after{
+  content:''; position:absolute; top: calc(50% - 12px); left: -110px;
+  width:25px; height:25px; border-radius:50%; background: var(--grey-soft);
+}
+
+/* ===========================
+   REALISATIONS (projects)
+=========================== */
+.project{
+  position:relative; width: 575px; height: 402px; margin-top:40px;
+  background: var(--card); border-radius:15px; box-shadow: var(--shadow);
+}
+.image-box{
+  height:326px; background-position:center; background-repeat:no-repeat; background-size:cover;
+  border-radius:15px;
+}
+/* overlay supprimé de sa transparence forcée ; on garde l’overlay si nécessaire via .overlay */
+.image-box:after{ content:''; position:absolute; inset:0; border-radius:15px; }
+
+#projects ul.tags{
+  font-family:'Montserrat', sans-serif; font-size:11px; font-weight:600; text-transform:uppercase;
+  color:#fff; margin-top: 18px;
+}
+#projects .tags li{
+  display:inline-block; padding:5px; margin:5px; background: var(--brand-rose);
+  border-radius:5px;
+}
+#projects ul.desc{
+  margin: 16px 24px; height: 170px; font-size:15px; line-height:25px; text-align:left; overflow:auto;
+}
+#projects .desc li:before{ content:'●'; padding-right:10px; }
+
+/* boutons projets */
+#projects button{
+  margin: 0;
+  font-size: 15px;
+  padding: 12px 30px;
+  background: var(--btn-green);
+  color:#fff;
+}
+#projects button:hover{ transform: translateY(-1px); }
+
+/* vignettes (exemples) */
+#nkproduction .image-box{ background-image: url("nk prodz.jpg"); }
+/* #portfolio-projet .image-box{ background-image: url("images/portfolio.jpg"); } */
+/* #todo-projet .image-box{ background-image: url("images/todo.jpg"); } */
+/* #miniblog-projet .image-box{ background-image: url("images/miniblog.jpg"); } */
+
+/* ===========================
+   CONTACT
+=========================== */
+.contact-subtitle{
+  text-align:center; margin: 10px 0 60px; line-height: 40px;
+}
+.contact-box{
+  width: 24%; text-align:center; padding: 30px;
+  border-radius: 15px; box-shadow: var(--shadow); background: var(--card);
+}
+.contact-box i{ font-size:60px; padding-bottom: 18px; }
+.contact-box .text{
+  font-family:'Montserrat', sans-serif; font-weight:700; font-size:20px;
+}
+
+/* on remplace les blocs très transparents par des variantes douces et pleines */
+.phone{ background: #F3E9F8; color:#9B59B6; }    /* lilas plein */
+.email{ background: #E7F3FD; color:#3498DB; }    /* bleu clair plein */
+.meet{  background: #E6FBF1; color:#2ECC71; }    /* vert clair plein */
+.meet p{ color:#707070; padding-top: 12px; line-height: 23px; }
+
+/* ===========================
+   FOOTER
+=========================== */
+footer{
+  background: #292929; color:#fff; font-size: 13px; text-align:center;
+  padding: 25px; line-height: 20px;
+}
+footer i{
+  font-size: 21px; margin: 0 10px 15px; padding: 10px 0; width: 40px;
+  border-radius: 40px; cursor:pointer; color:#fff; transition: transform .2s ease, opacity .2s ease;
+}
+footer i:hover{ transform: translateY(-1px); }
+footer .fa-linkedin-in{ background:#007bb6; }
+footer .fa-viadeo{ background:#ee7252; }
+footer .fa-print{ background:#8c8c8c; }
+
+/* ===========================
+   BOUTONS outline custom
+=========================== */
+.custom-button{
+  display:inline-block; border:2px solid var(--btn-green); color: var(--btn-green);
+  background: transparent; padding: 10px 20px; border-radius: 20px; text-decoration:none;
+  transition: all .25s ease;
+}
+.custom-button:hover{ background: var(--btn-green); color:#fff; }
+.green{ background: var(--btn-green); color:#fff; border-color: var(--btn-green); }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+/* Smartphones */
+@media (max-width: 600px){
+  nav{ position: static; }             /* évite chevauchements */
+  nav ul{ width:100%; text-align:center; padding-top: 10px; }
+  nav li{ display:block; padding: 10px 0; }
+
+  #menu-buttons{ display:block; }
+  #homepage{ width: 90%; margin-top: 120px; }
+
+  .project{ width: 90%; height:auto; }
+  .image-box{ height: 220px; }
+
+  .contact-box{ width:100%; margin-bottom: 12px; }
+}
+
+/* Tablettes */
+@media (min-width: 601px) and (max-width: 1024px){
+  nav{ position: static; }
+  nav ul{ width:100%; text-align:center; }
+  nav li{ display:block; padding: 12px 0; }
+
+  #menu-buttons{ display:none; }
+  #homepage{ width: 84%; margin-top: 100px; }
+
+  .project{ width: 84%; }
+}
