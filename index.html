@@ -3,24 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Farah Khamassi</title>
+
+  <title>Portfolio — Farah Khamassi (Développeuse web junior)</title>
+  <meta name="description" content="Portfolio de Farah Khamassi — développeuse web junior à Nantes. Projets front & back : HTML, CSS, JavaScript, PHP, MySQL." />
+  <meta name="theme-color" content="#8b5e34" />
+
+  <!-- Open Graph (aperçu lors du partage) -->
+  <meta property="og:title" content="Portfolio — Farah Khamassi" />
+  <meta property="og:description" content="Développeuse web junior — interfaces claires et performantes. Nantes & télétravail." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://farahkhamassi.github.io/portfolio/" />
+
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="container">
-    <nav class="nav">
-      <a href="#" class="logo">Farah<span>.</span></a>
-      <ul class="menu">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="burger" aria-label="Ouvrir le menu">☰</button>
-    </nav>
+  <!-- Lien d'évitement pour l'accessibilité clavier -->
+  <a class="visually-hidden" href="#main">Aller au contenu</a>
+
+  <header>
+    <div class="container">
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#accueil" class="logo" aria-label="Accueil">Farah<span>.</span></a>
+        <ul class="menu" id="primary-menu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="burger" aria-label="Ouvrir le menu" aria-controls="primary-menu" aria-expanded="false">☰</button>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
     <section id="accueil" class="hero container">
       <h1>Développeuse web junior</h1>
       <p>Je conçois des interfaces simples, accessibles et efficaces.</p>
@@ -29,8 +48,8 @@
 
     <section id="apropos" class="container">
       <h2>À propos</h2>
-      <p>En reconversion vers le développement web (front & back). Rigoureuse, curieuse et orientée utilisateur.</p>
-      <ul class="tags">
+      <p>En reconversion vers le développement web (front &amp; back). Rigoureuse, curieuse et orientée utilisateur.</p>
+      <ul class="tags" aria-label="Compétences techniques">
         <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>Git</li>
       </ul>
     </section>
@@ -41,33 +60,38 @@
         <article class="card">
           <h3>Portfolio</h3>
           <p>Site personnel responsive (HTML/CSS/JS).</p>
-          <a href="#" class="link">Voir le code</a>
+          <a href="https://github.com/farahkhamassi/portfolio" class="link" target="_blank" rel="noopener">Voir le code</a>
         </article>
         <article class="card">
           <h3>To-Do List</h3>
           <p>Application JS (localStorage, DOM).</p>
-          <a href="#" class="link">Voir le code</a>
+          <a href="https://github.com/farahkhamassi/todo-list" class="link" target="_blank" rel="noopener">Voir le code</a>
         </article>
         <article class="card">
           <h3>Mini-Blog</h3>
           <p>CRUD PHP/MySQL (articles).</p>
-          <a href="#" class="link">Voir le code</a>
+          <a href="https://github.com/farahkhamassi/mini-blog" class="link" target="_blank" rel="noopener">Voir le code</a>
         </article>
         <article class="card">
-          <h3>Saas</h3>
-          <p>Saas projet installation.</p>
-          <a href="#" class="link">Voir le code</a>
+          <h3>SaaS</h3>
+          <p>Projet SaaS — installation &amp; base.</p>
+          <a href="https://github.com/farahkhamassi/saas-starter" class="link" target="_blank" rel="noopener">Voir le code</a>
         </article>
-
       </div>
     </section>
 
     <section id="contact" class="container">
       <h2>Contact</h2>
-      <form id="contactForm">
-        <label>Nom <input type="text" name="name" required /></label>
-        <label>Email <input type="email" name="email" required /></label>
-        <label>Message <textarea name="message" rows="4" required></textarea></label>
+      <form id="contactForm" novalidate>
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
         <button class="btn" type="submit">Envoyer</button>
       </form>
       <p id="formStatus" class="status" aria-live="polite"></p>
@@ -75,7 +99,7 @@
   </main>
 
   <footer class="container footer">
-    <small>© <span id="year"></span> Farah Khamassi</small>
+    <small>© <span id="year"></span> Farah Khamassi — Nantes</small>
   </footer>
 
   <script src="script.js"></script>
