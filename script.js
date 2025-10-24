@@ -12,8 +12,12 @@ burger?.addEventListener('click', () => {
 // formulaire de contact simulé (pas d'envoi réel)
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
+
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
-  statusEl.textContent = 'Merci ! Votre message a bien été simulé.';
-  form.reset();
+
+const date = new Date().toLocaleString('fr-FR');
+
+statusEl.textContent = `Merci ! Votre message a bien été simulé le ${date}.`;
+form.reset();
 });
